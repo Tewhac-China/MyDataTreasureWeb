@@ -138,10 +138,35 @@
   body[data-theme="dark"] .rel:hover{background:#0f172a}
   body[data-theme="dark"] .reader-box,body[data-theme="dark"] .inspire-box{background:#1e293b}
   body[data-theme="dark"] .icard{background:#0f172a}
+
+/* ---------- 窄屏自适应：画布与侧栏改为上下堆叠 ---------- */
+@media (max-width:900px){
+  .wrap{flex-direction:column;height:auto;min-height:calc(100vh - 50px)}
+  #graph{flex:0 0 auto;width:100%;height:58vh}
+  #resizer{display:none}
+  .side{width:auto;flex:0 0 auto;max-height:none;overflow:visible;border-left:0;border-top:1px solid var(--line)}
+  .suggest{left:12px;right:12px;width:auto;max-width:none}
+  /* header 此前 flex-wrap:nowrap 且无 overflow 兜底，窄屏直接把整页顶穿 */
+  /* 窄屏下这条多行头部不该吸附——178px 的常驻头部会吃掉手机屏两成高度；
+     让它随内容滚走，与站点顶栏的处理保持一致。 */
+  header{position:static;flex-wrap:wrap;white-space:normal;gap:6px;padding:7px 12px;row-gap:6px}
+  header h1{font-size:14px}
+  .search{flex:1 1 150px;min-width:0}
+  .filters,.tools{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;min-width:0;max-width:100%}
+  .filters::-webkit-scrollbar,.tools::-webkit-scrollbar{display:none}
+}
+
+/* 图谱页此前整页零链接：从门户卡片进来后只能靠浏览器后退离开。
+   给 header 补一条回门户的链接，样式沿用 .fbtn 的胶囊观感。 */
+.backlink{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;
+  padding:5px 11px;border-radius:999px;border:1px solid var(--line);
+  background:rgba(255,255,255,.7);color:var(--ink2);text-decoration:none;white-space:nowrap;flex:0 0 auto}
+.backlink:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
 </style>
 </head>
 <body>
 <header>
+    <a class="backlink" href="../../../../index.html">&#8592; 数据宝库</a>
   <h1>观点知识库 · 网图浏览器</h1>
   <span id="stats" class="stats"></span>
   <input id="search" class="search" placeholder="搜索标题 / UP主 / 概念，回车或点选聚焦…">

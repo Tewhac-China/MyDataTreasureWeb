@@ -1,0 +1,22 @@
+{
+  "_说明": [
+    "把本文件复制为 sources.json 后，改成你自己机器上的路径：cp sources.example.json sources.json",
+    "sources.json 不进版本库——里面存的是本机绝对路径与 B 站 UID，属于只在这台机器上有意义的私密配置。",
+    "「UP主全转录」板块的稿件来源目录（与收藏夹分支、主动归档互不混算）。",
+    "加一条就多一个分组卡片；dir 支持绝对路径，也支持相对 MyDataTreasureWeb 的路径，可用 * 通配。",
+    "改完重跑：python _build/build_portal.py",
+    "默认跳过 README.md / 已下载清单.md 以及 _ 或 . 开头的文件。"
+  ],
+  "skipFiles": ["README.md", "已下载清单.md"],
+  "sources": [
+    {
+      "key": "example",
+      "name": "示例来源（请改成你自己的目录）",
+      "dir": "/absolute/path/to/your/transcript_output",
+      "group": "upfull",
+      "groupName": "UP主全转录",
+      "color": "#0ea5e9",
+      "note": "该 UP 主的全量转录整理稿（ASR 字幕稿）。"
+    }
+  ]
+}

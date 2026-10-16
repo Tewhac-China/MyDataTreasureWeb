@@ -16,6 +16,14 @@
 !/gallery.html
 !/transcripts.html
 
+# --- 放行页面生成器源码，让线上产物的来历与改法在仓库里可复现 ---
+#     只放 .py 与示例配置；sources.json 存的是本机绝对路径与 B 站 UID，
+#     属于「只在我这台机器上有意义」的私密配置，一律不上传。
+!/_build/
+/_build/*
+!/_build/*.py
+!/_build/sources.example.json
+
 # --- 放行知识图谱模块（页面 + 它们 fetch 的 JSON）---
 !/projects/
 /projects/*
