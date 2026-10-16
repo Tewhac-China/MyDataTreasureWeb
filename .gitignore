@@ -1,0 +1,54 @@
+# ============================================================
+#  GitHub Pages 部署白名单
+#  默认忽略本目录的一切内容，只放行下面显式列出的站点文件。
+#  这样本地那些原始素材（音频、抓取数据、Python 依赖、个人文档、
+#  临时脚本与日志）不可能被误提交。
+# ============================================================
+
+# --- 先忽略所有 ---
+/*
+
+# --- 放行站点入口（仓库根 = Pages 根）---
+!/.gitignore
+!/.nojekyll
+!/README.md
+!/index.html
+!/gallery.html
+!/transcripts.html
+
+# --- 放行知识图谱模块（页面 + 它们 fetch 的 JSON）---
+!/projects/
+/projects/*
+!/projects/bilibili-kb/
+/projects/bilibili-kb/*
+!/projects/bilibili-kb/graph/
+!/projects/bilibili-kb/kepu/
+/projects/bilibili-kb/kepu/*
+!/projects/bilibili-kb/kepu/graph/
+
+# --- 图谱目录里只留运行所需文件 ---
+projects/bilibili-kb/graph/*.bak.html
+projects/bilibili-kb/kepu/graph/*.bak.html
+
+# --- 关键帧图片：画廊与图谱灯箱按相对路径引用这两处 ---
+#     （projects/bilibili-kb/* 已排除本目录，必须逐层放行）
+!/projects/bilibili-kb/raw/
+!/projects/bilibili-kb/kepu/raw/
+
+# --- 明确不放行：本地采集流水线状态（含 GPU/看门狗等内部信息）---
+projects/bilibili-kb/.kb_status/
+
+# --- yt-dlp 日志可能含 cookie / 带签名请求 URL，一律不上传 ---
+*.ytlog
+**/*.ytlog
+
+# --- 兜底：任何情况下都不上传的东西 ---
+*.key
+*.pem
+*.token
+*token*.txt
+.env*
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
