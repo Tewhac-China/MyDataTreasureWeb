@@ -47,7 +47,7 @@
 | 模块 · Module | 能做什么 · What it does |
 |---|---|
 | **🧭 入口门户 · Portal**<br/>[`index.html`](https://tewhac-china.github.io/MyDataTreasureWeb/) | 知识库构成总览、项目与文件清单、文稿速览、使用说明。<br/>Overview of the corpus, file inventory, and a document preview feed. |
-| **📚 文稿全文库 · Transcripts**<br/>[`transcripts.html`](https://tewhac-china.github.io/MyDataTreasureWeb/transcripts.html) | 234 篇整理稿全文，按库 / 类型 / UP 主过滤，左侧筛选右侧阅读；每篇带概要、关键帧图说、抽取出的概念与实体。支持 `#q=关键词` 全文检索与 `#id=` 深链。<br/>All 234 cleaned-up transcripts with facet filters, per-document summaries, key-frame captions, extracted concepts/entities. Hash-based full-text search and deep links. |
+| **📚 文稿全文库 · Transcripts**<br/>[`transcripts.html`](https://tewhac-china.github.io/MyDataTreasureWeb/transcripts.html) | 237 篇文稿全文（收藏夹整理稿 234 + 主动归档 3），按库 / 类型 / UP 主过滤，左侧筛选右侧阅读；每篇带概要、关键帧图说、抽取出的概念与实体。支持 `#q=关键词`、`#c=库名` 全文检索与深链。<br/>All 237 documents (234 collection transcripts + 3 manually archived), with facet filters, per-document summaries, key-frame captions, extracted concepts/entities. Hash-based full-text search and deep links. |
 | **🖼 关键帧画廊 · Keyframe gallery**<br/>[`gallery.html`](https://tewhac-china.github.io/MyDataTreasureWeb/gallery.html) | 1331 张真实画面摊平成一面图墙，可以直接按**画面描述**或**画面里的字幕**搜图，点开翻页、跳回对应文稿。<br/>1,331 real frames on one wall — search by what the picture shows or by the on-screen subtitle text, then jump back to the matching transcript. |
 | **🌐 概念网图浏览器 · Graph explorer**<br/>[主库 · opinion](https://tewhac-china.github.io/MyDataTreasureWeb/projects/bilibili-kb/graph/kb.html) · [合并视图 · merged](https://tewhac-china.github.io/MyDataTreasureWeb/projects/bilibili-kb/graph/kb_all.html) · [科普库 · science](https://tewhac-china.github.io/MyDataTreasureWeb/projects/bilibili-kb/kepu/graph/kb.html) | Canvas 力导向图：LSI 语义检索、关键字检索、概念浏览器、二阶邻居高亮、社区着色、拖拽钉住、关键帧灯箱；`#n=BV号` 直达节点。合并视图把两个收藏夹放进同一张网，共享概念自动连边。<br/>Canvas force-directed graph with LSI semantic search, keyword search, concept browser, 2nd-order neighbour highlighting, community colouring, draggable pinning and a keyframe lightbox. The merged view overlays both collections so shared concepts link across them. |
 
@@ -57,8 +57,8 @@
 
 | | 中文 | English | 数量 · Count |
 |---|---|---|---|
-| 📄 | 整理稿 | Cleaned transcripts | **234** 篇 |
-| ✍️ | 正文字数 | Characters of prose | **51.7 万** · ~517k |
+| 📄 | 文稿总数 | Documents | **237** 篇（收藏夹整理稿 234 + 主动归档 3） |
+| ✍️ | 正文字数 | Characters of prose | **54.1 万** · ~541k |
 | 🖼 | 关键帧 | Key frames | **1,331** 张 |
 | 🎙 | 涉及 UP 主 | UP-loaders covered | **189** 位 |
 | 🏷 | 抽取实体 | Extracted entities | **2,623** 个 |
